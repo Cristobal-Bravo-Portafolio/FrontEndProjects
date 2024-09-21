@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     <section id="contact" className={styles.contact}>
       <h2>Contáctanos</h2>
       <p>
-        Dirección: Calle Vegana 123, Santiago, Chile<br />
+        Dirección: Calle 123, Santiago, Chile<br />
         Teléfono: +56 9 8765 4321<br />
         Correo: contacto@elvegano.cl
       </p>
