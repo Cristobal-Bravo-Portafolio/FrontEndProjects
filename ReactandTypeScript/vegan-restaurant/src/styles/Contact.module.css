@@ -1,17 +1,22 @@
-/* Contact section styling */
+/* Estilo para la sección de Contacto */
+
+/* .contact: Define el estilo general para la sección "Contacto" */
 .contact {
-    background-color: #f4f4f4;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  
-  .contact h2 {
-    font-size: 2.5rem;
-    color: #27ae60;
-    margin-bottom: 30px;
-  }
-  
-  .contact p {
-    font-size: 1.2
-  }
+  background-color: #f4f4f4; /* Establece un fondo gris claro para diferenciar visualmente esta sección de otras en la página */
+  padding: 80px 20px; /* Añade 80px de espacio vertical (arriba y abajo) y 20px de espacio horizontal (izquierda y derecha) alrededor del contenido */
+  text-align: center; /* Centra todo el contenido dentro de la sección, incluyendo títulos y texto */
+}
+
+/* .contact h2: Define el estilo para el título (h2) dentro de la sección "Contacto" */
+.contact h2 {
+  font-size: 2.5rem; /* Ajusta el tamaño de la fuente del título a 2.5 rem, haciéndolo más grande y prominente */
+  color: #27ae60; /* Establece el color del texto en verde (#27ae60) para mantener la coherencia visual con el tema del proyecto */
+  margin-bottom: 30px; /* Añade un margen inferior de 30px para separar el título del resto del contenido, mejorando la legibilidad */
+}
+
+/* .contact p: Aplica estilos a los párrafos dentro de la sección "Contacto" */
+.contact p {
+  font-size: 1.2; /* Hay un error en esta línea, falta especificar la unidad de medida (rem o px). Probablemente debería ser `1.2rem` o `1.2em` para mantener coherencia con otros estilos de fuente. */
+}
+
   

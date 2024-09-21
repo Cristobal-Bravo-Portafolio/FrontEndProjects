@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Declaración del tipo de documento (DOCTYPE) -->
+  <!-- <!DOCTYPE html> indica al navegador que este documento está escrito en HTML5, la versión más reciente del lenguaje HTML -->
+  <!-- Esto asegura que el navegador renderice el contenido usando los estándares más modernos de HTML -->
   <head>
+    <!-- Configuraciones básicas para el encabezado de la página web -->
+    
+    <!-- Declara el conjunto de caracteres utilizado en la página, que en este caso es UTF-8 -->
+    <!-- UTF-8 es el estándar más común para la codificación de caracteres, permitiendo que la página maneje una amplia gama de caracteres -->
     <meta charset="UTF-8" />
+    
+    <!-- Establece el viewport para controlar el diseño responsivo de la página -->
+    <!-- viewport: El área visible del contenido, esencial para que la página se vea correctamente en dispositivos móviles -->
+    <!-- width=device-width: Ajusta el ancho del contenido al ancho del dispositivo -->
+    <!-- initial-scale=1.0: Asegura que la página no sea escalada al cargarla, lo que proporciona un zoom inicial del 100% -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Compatibilidad con versiones antiguas de Internet Explorer -->
+    <!-- X-UA-Compatible es un meta tag que fuerza a IE a usar el modo de renderizado más reciente disponible, en este caso 'edge' -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- Título de la página web que aparece en la pestaña del navegador -->
+    <!-- El contenido de este <title> es 'React App' por defecto, pero se puede cambiar para personalizar el nombre del proyecto -->
     <title>React App</title>
   </head>
+  
   <body>
+    <!-- Muestra este mensaje si el usuario tiene JavaScript deshabilitado en su navegador -->
+    <!-- <noscript> se usa para proporcionar contenido alternativo si el navegador no tiene JavaScript habilitado -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    
+    <!-- Este es el contenedor principal donde se inyectará la aplicación de React -->
+    <!-- El elemento con el id 'root' es crucial porque es donde React montará y renderizará toda la aplicación -->
+    <!-- Todo el contenido de la app se genera dinámicamente dentro de este <div> utilizando ReactDOM.render() en el código de React -->
     <div id="root"></div>
   </body>
 </html>
+
 

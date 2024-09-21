@@ -1,90 +1,114 @@
-/* Menu title wrapper to ensure proper alignment */
+/* Envoltorio del título del menú para asegurar la alineación adecuada */
+
+/* .menuTitleWrapper: Este contenedor asegura que el título del menú esté bien centrado dentro de su sección */
 .menuTitleWrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: #ffffff;
-  }
-  
-  /* Title styling */
-  .menuTitle {
-    font-size: 4rem; /* Large title size */
-    color: #27ae60;
-    font-weight: 600;
-    margin: 0; /* Remove any margin issues */
-    text-align: center;
-  }
-  
-  /* Menu items styling */
-  .menuItem {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .menuItem:hover {
-    transform: translateY(-5px);
-  }
-  
-  .menuImage {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
-    border-radius: 10px;
-  }
-  
-  .menuDetails {
-    flex-grow: 1;
-  }
-  
-  .price {
-    font-weight: bold;
-    color: #27ae60;
-  }
-  
-  /* Filters section */
-  .filters {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px; /* Increased margin for better spacing */
-    gap: 15px; /* Add space between buttons */
-  }
-  
-  /* Style for each button */
-  .filters button {
-    background-color: #27ae60;
-    color: white;
-    border: 2px solid transparent;
-    padding: 12px 30px; /* Adjusted padding for more button prominence */
-    cursor: pointer;
-    border-radius: 30px; /* Slightly more rounded corners */
-    font-size: 1.1rem;
-    font-weight: bold;
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Hover effect */
-  .filters button:hover {
-    background-color: white;
-    color: #27ae60;
-    border: 2px solid #27ae60;
-    transform: translateY(-3px); /* Lift the button slightly */
-  }
-  
-  /* Active button style */
-  .filters button.active {
-    background-color: #2ecc71;
-    color: white;
-    border: 2px solid #2ecc71;
-  }
-  
+  display: flex; /* Flexbox se utiliza para alinear y centrar el contenido */
+  justify-content: center; /* Centra el título horizontalmente dentro del contenedor */
+  align-items: center; /* Centra verticalmente el contenido, asegurando que el título esté en el medio de la sección */
+  padding-top: 100px; /* Añade espacio superior para separar el título del borde superior de la pantalla */
+  padding-bottom: 100px; /* Añade espacio inferior para crear una buena separación entre el título y el contenido que sigue */
+  background-color: #ffffff; /* Fondo blanco para la sección del título, creando contraste con el contenido posterior */
+}
+
+/* Estilo del título */
+
+/* .menuTitle: Define el estilo para el título principal del menú */
+.menuTitle {
+  font-size: 4rem; /* Tamaño de fuente grande para hacer que el título sea prominente */
+  color: #27ae60; /* El color verde (coherente con la paleta de colores del proyecto) */
+  font-weight: 600; /* Hace el texto más grueso para darle mayor énfasis */
+  margin: 0; /* Elimina cualquier margen que pueda estar presente por defecto en los encabezados */
+  text-align: center; /* Alinea el texto del título al centro */
+}
+
+/* Estilos para los elementos del menú */
+
+/* .menuItem: Estilo de cada elemento individual del menú */
+.menuItem {
+  display: flex; /* Flexbox permite alinear la imagen y la descripción en una fila horizontal */
+  align-items: center; /* Asegura que la imagen y el texto estén alineados verticalmente al centro */
+  background-color: #fff; /* Fondo blanco para que el elemento resalte en la página */
+  padding: 20px; /* Añade espacio alrededor del contenido para que no esté pegado al borde */
+  margin-bottom: 30px; /* Espacio entre los elementos para que no se vean amontonados */
+  border-radius: 10px; /* Bordes ligeramente redondeados para un diseño más moderno y suave */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para dar profundidad y hacer que el elemento destaque */
+  transition: transform 0.3s ease-in-out; /* Transición suave para los efectos de hover */
+}
+
+/* Efecto al pasar el ratón sobre el elemento del menú */
+
+/* .menuItem:hover: Al pasar el ratón sobre el elemento, se eleva ligeramente */
+.menuItem:hover {
+  transform: translateY(-5px); /* Mueve el elemento ligeramente hacia arriba, creando un efecto interactivo atractivo */
+}
+
+/* Imagen de los elementos del menú */
+
+/* .menuImage: Estilos específicos para las imágenes de los elementos del menú */
+.menuImage {
+  width: 150px; /* Fija el ancho de la imagen */
+  height: 150px; /* Fija la altura de la imagen, manteniendo una proporción cuadrada */
+  object-fit: cover; /* Asegura que la imagen ocupe todo el espacio disponible sin distorsionarse */
+  margin-right: 20px; /* Añade espacio entre la imagen y la descripción */
+  border-radius: 10px; /* Bordes redondeados para que coincidan con el estilo de los elementos del menú */
+}
+
+/* .menuDetails: Contenedor de los detalles del menú (nombre, descripción, precio) */
+.menuDetails {
+  flex-grow: 1; /* Permite que la descripción ocupe todo el espacio disponible, expandiéndose según sea necesario */
+}
+
+/* .price: Estilo del precio del platillo */
+
+/* .price: El precio del platillo se destaca con un estilo audaz */
+.price {
+  font-weight: bold; /* Negrita para enfatizar el precio */
+  color: #27ae60; /* El color verde coincide con la paleta del proyecto */
+}
+
+/* Sección de filtros */
+
+/* .filters: Estilo para el contenedor de los botones de filtro */
+.filters {
+  display: flex; /* Flexbox para alinear los botones horizontalmente */
+  justify-content: center; /* Centra los botones de filtro dentro del contenedor */
+  margin-bottom: 50px; /* Añade un margen inferior para separar los filtros del contenido del menú */
+  gap: 15px; /* Añade espacio entre los botones para que no estén demasiado juntos */
+}
+
+/* Estilo de cada botón de filtro */
+
+/* .filters button: Define el estilo para los botones de filtro */
+.filters button {
+  background-color: #27ae60; /* Fondo verde que coincide con la paleta de colores */
+  color: white; /* Texto en blanco para contraste con el fondo */
+  border: 2px solid transparent; /* Un borde invisible por defecto */
+  padding: 12px 30px; /* Espaciado interno para hacer los botones más grandes y fáciles de clicar */
+  cursor: pointer; /* Cambia el cursor al pasar por encima para indicar que es interactivo */
+  border-radius: 30px; /* Bordes redondeados para darle un aspecto más moderno y amigable */
+  font-size: 1.1rem; /* Tamaño de fuente moderadamente grande para que el texto sea fácil de leer */
+  font-weight: bold; /* Negrita para hacer que el texto del botón sea más claro */
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves en el fondo, borde y transformación */
+}
+
+/* Efecto hover para los botones */
+
+/* .filters button:hover: Cambia el estilo cuando el usuario pasa el ratón sobre el botón */
+.filters button:hover {
+  background-color: white; /* Al pasar el ratón, el fondo se vuelve blanco */
+  color: #27ae60; /* El texto se vuelve verde */
+  border: 2px solid #27ae60; /* Aparece un borde verde cuando el botón está en hover */
+  transform: translateY(-3px); /* El botón se eleva ligeramente, mejorando la interactividad */
+}
+
+/* Estilo para el botón activo */
+
+/* .filters button.active: Aplica un estilo diferente para el botón de filtro que está activo */
+.filters button.active {
+  background-color: #2ecc71; /* Fondo verde más brillante para indicar el botón seleccionado */
+  color: white; /* El texto permanece blanco */
+  border: 2px solid #2ecc71; /* El borde coincide con el color de fondo cuando está activo */
+}
+
   
   

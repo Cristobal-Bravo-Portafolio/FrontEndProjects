@@ -1,39 +1,80 @@
-/* Import Google Fonts for better typography */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Importa Google Fonts para mejorar la tipografía en toda la aplicación */
+/* Se usa @import para traer la fuente "Poppins" desde Google Fonts,
+   con diferentes pesos de fuente (300: ligero, 400: normal, 600: semi-negrita).
+   Esto mejora la presentación del texto en la aplicación, dándole un estilo moderno y profesional. */
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Global font setup */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* White and green color palette */
-body {
-  background-color: #fff;
-  color: #333;
-}
-
-/* Link styles */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Section padding for consistent layout */
-section {
-  padding: 60px 20px;
-}
-
-/* General styling for headings */
-h1, h2, h3 {
-  color: #27ae60;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
+   /* Configuración global de fuentes */
+   /* Este bloque afecta a todos los elementos de la página.
+      Se utiliza * para seleccionar todos los elementos del DOM y aplicar reglas comunes. */
+   * {
+     /* Resetea los márgenes de todos los elementos a 0 para eliminar espaciado predeterminado que varía según el navegador */
+     margin: 0;
+     
+     /* Resetea el padding (relleno) de todos los elementos a 0 para evitar problemas de espaciado no deseado */
+     padding: 0;
+   
+     /* Define el modelo de caja como "border-box", lo que asegura que el padding y el borde se incluyan en el tamaño total del elemento
+        (en lugar de añadirlos por encima de width y height). Esto facilita el control del diseño de la página. */
+     box-sizing: border-box;
+   
+     /* Establece la fuente predeterminada "Poppins" para todo el contenido, 
+        y si no está disponible, usa cualquier fuente sans-serif. Esto garantiza consistencia en el diseño tipográfico. */
+     font-family: 'Poppins', sans-serif;
+   }
+   
+   /* Scroll suave */
+   /* Esta regla hace que el desplazamiento entre secciones al hacer clic en un enlace ancla (ej: href="#seccion") sea suave,
+      en lugar del salto inmediato predeterminado. Mejora la experiencia del usuario al hacer la navegación más fluida. */
+   html {
+     scroll-behavior: smooth;
+   }
+   
+   /* Paleta de colores blanco y verde */
+   /* Estilos predeterminados para el body de la página, que contiene todo el contenido visible.
+      La paleta de colores es blanca (para el fondo) y gris oscuro (para el texto), lo que proporciona un aspecto limpio y fácil de leer. */
+   body {
+     /* Fondo blanco para toda la página, asegurando una apariencia clara y minimalista */
+     background-color: #fff;
+   
+     /* Color del texto en gris oscuro (#333), que es más suave para los ojos que el negro puro (#000),
+        y proporciona buen contraste sobre el fondo blanco, mejorando la legibilidad. */
+     color: #333;
+   }
+   
+   /* Estilos para enlaces */
+   /* Se define un estilo global para todos los enlaces (<a>) de la página, asegurando que sean consistentes. */
+   a {
+     /* Elimina el subrayado predeterminado de los enlaces para darle una apariencia más limpia */
+     text-decoration: none;
+   
+     /* Hace que los enlaces hereden el color del contexto en el que están (en lugar de usar el color azul predeterminado).
+        Esto permite que los enlaces se integren visualmente con el resto del contenido. */
+     color: inherit;
+   }
+   
+   /* Padding para las secciones */
+   /* Define un padding estándar para todas las secciones (<section>) de la página.
+      Esto asegura que cada sección tenga un espaciado uniforme, mejorando la organización y el diseño. */
+   section {
+     /* Aplica un padding de 60px arriba y abajo, y 20px a los lados.
+        Esto crea un espacio adecuado entre el contenido y los bordes de la página, evitando que todo se vea comprimido. */
+     padding: 60px 20px;
+   }
+   
+   /* Estilos generales para los encabezados */
+   /* Se aplican estilos consistentes a los encabezados h1, h2 y h3 para asegurar uniformidad en la tipografía de los títulos. */
+   h1, h2, h3 {
+     /* Color verde (#27ae60) para los títulos, alineado con la paleta de colores de la aplicación.
+        Este color ayuda a que los encabezados resalten sobre el fondo blanco. */
+     color: #27ae60;
+   
+     /* Margen inferior de 20px para crear un espacio debajo de los encabezados, 
+        asegurando que no estén demasiado cerca del contenido que sigue. */
+     margin-bottom: 20px;
+   
+     /* Aplica un peso de fuente de 600 (semi-negrita) para que los títulos sean prominentes 
+        sin ser demasiado pesados visualmente. */
+     font-weight: 600;
+   }
+   

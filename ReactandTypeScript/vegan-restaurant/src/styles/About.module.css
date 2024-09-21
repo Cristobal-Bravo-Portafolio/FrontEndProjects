@@ -1,32 +1,32 @@
-/* About section styling */
+/* Estilo principal de la sección "About" */
+
+/* .about: Define los estilos generales para la sección "Sobre Nosotros". */
 .about {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    max-width: 100%;
-    margin: 0;
-  }
-  
-  .about h2 {
-    font-size: 3.5rem;
-    color: #27ae60;
-    margin-bottom: 30px;
-  }
-  
-  /* Add background color and more space below "Sobre Nosotros" */
-  .about {
-    padding-bottom: 100px;
-  }
-  
-  .about p {
-    font-size: 1.4rem;
-    color: #555;
-    line-height: 2;
-    margin: 0 auto; /* Center the text block */
-    max-width: 800px; /* Set a max width to keep the text neatly wrapped */
-    padding: 0 20px; /* Add padding to the sides for better readability */
-  }
+  background-color: #f4f4f4; /* Establece un color de fondo gris claro (#f4f4f4) para diferenciar visualmente esta sección de otras. */
+  text-align: center; /* Alinea todo el contenido de la sección al centro, lo que incluye el texto y otros elementos. */
+  padding-top: 100px; /* Añade 100 píxeles de espacio (padding) en la parte superior de la sección para darle aire y que el contenido no esté demasiado cerca del borde superior. */
+  padding-bottom: 100px; /* Añade 100 píxeles de espacio en la parte inferior para equilibrar el diseño con la parte superior. */
+  max-width: 100%; /* Asegura que la sección ocupe el 100% del ancho disponible en el contenedor padre, sin limitar el tamaño horizontal. */
+  margin: 0; /* Elimina cualquier margen externo, asegurando que la sección ocupe todo el espacio disponible. */
+}
+
+/* .about h2: Aplica estilos específicos al título (h2) dentro de la sección "About". */
+.about h2 {
+  font-size: 3.5rem; /* Ajusta el tamaño de la fuente del título a 3.5 rem (relativa al tamaño de la fuente base), haciendo que el título sea grande y llamativo. */
+  color: #27ae60; /* Establece el color del texto en verde (#27ae60), que es coherente con la paleta de colores del proyecto (blanco y verde). */
+  margin-bottom: 30px; /* Añade un margen inferior de 30 píxeles para separar el título del contenido que viene después (como el párrafo). */
+}
+
+/* .about p: Aplica estilos a los párrafos dentro de la sección "About". */
+.about p {
+  font-size: 1.4rem; /* Ajusta el tamaño de la fuente a 1.4 rem, lo que la hace más grande que el texto estándar, para mayor legibilidad. */
+  color: #555; /* Establece un color de texto gris (#555), lo que lo hace suave pero legible sobre el fondo gris claro. */
+  line-height: 2; /* Aumenta el interlineado a 2, lo que mejora la legibilidad y da una apariencia más espaciosa al texto. */
+  margin: 0 auto; /* Centra el bloque de texto dentro de la sección al asignar márgenes automáticos a los lados izquierdo y derecho. */
+  max-width: 800px; /* Limita el ancho máximo del párrafo a 800 píxeles, evitando que el texto se extienda demasiado en pantallas grandes, lo que mejora la legibilidad. */
+  padding: 0 20px; /* Añade un padding de 20 píxeles a los lados izquierdo y derecho, asegurando que el texto no esté pegado al borde en pantallas pequeñas. */
+}
+
   
 
 

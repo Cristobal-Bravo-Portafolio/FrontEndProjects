@@ -1,31 +1,39 @@
-/* Home section styling */
+/* Estilos para la sección de inicio (Home) */
+
+/* .home: Estilos principales de la sección de inicio que cubre toda la pantalla. */
 .home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #fefefe;
-  text-align: center;
-}
-
-/* Logo styling */
-.logo {
-  width: 150px;
-  height: auto;
-  margin-bottom: 20px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Title and subtitle styling */
-.title {
-  font-size: 3rem;
-  color: #27ae60;
-}
-
-.subtitle {
-  font-size: 1.5rem;
-  color: #555;
-  margin-top: 10px;
-}
+    display: flex; /* Utiliza Flexbox para crear un layout flexible y centrar el contenido vertical y horizontalmente. */
+    flex-direction: column; /* Organiza los elementos hijos (logo, título, subtítulo) en una columna, uno debajo del otro. */
+    align-items: center; /* Centra horizontalmente todo el contenido dentro del contenedor de la sección. */
+    justify-content: center; /* Centra verticalmente todo el contenido dentro de la sección, asegurando que esté en el medio de la pantalla. */
+    height: 100vh; /* La altura de la sección cubre el 100% del viewport (altura total de la ventana). Esto hace que la sección "Home" ocupe toda la pantalla. */
+    background-color: #fefefe; /* Establece un fondo blanco suave para la sección. El color blanco ayuda a resaltar el contenido visual y textual. */
+    text-align: center; /* Alinea el texto al centro para que el título y el subtítulo estén centrados en la pantalla. */
+  }
+  
+  /* Estilo del logo */
+  
+  /* .logo: Estilos específicos para la imagen del logo que aparece en la página de inicio. */
+  .logo {
+    width: 150px; /* Establece el ancho del logo a 150px, lo que asegura un tamaño fijo sin importar el tamaño de la pantalla. */
+    height: auto; /* Mantiene la proporción del logo al ajustar la altura automáticamente según el ancho. */
+    margin-bottom: 20px; /* Añade un margen inferior de 20px para separar el logo del título que se encuentra debajo. */
+    border-radius: 50%; /* Redondea completamente los bordes del logo, creando una forma circular. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra suave alrededor del logo, lo que le da un efecto de elevación sobre el fondo. */
+  }
+  
+  /* Estilos del título y subtítulo */
+  
+  /* .title: Estilos para el título principal de la sección Home */
+  .title {
+    font-size: 3rem; /* Define un tamaño de fuente grande (3rem) para que el título sea lo más destacado de la página. */
+    color: #27ae60; /* Aplica un color verde (#27ae60) que es coherente con la paleta de colores del proyecto, destacando el título. */
+  }
+  
+  /* .subtitle: Estilos para el subtítulo que aparece debajo del título */
+  .subtitle {
+    font-size: 1.5rem; /* Define un tamaño de fuente menor para el subtítulo, pero suficientemente grande para ser legible y atractivo. */
+    color: #555; /* El subtítulo tiene un color gris (#555), que es más suave que el negro, creando un contraste visual con el título verde. */
+    margin-top: 10px; /* Añade un margen superior de 10px para separar el subtítulo del título, mejorando la legibilidad. */
+  }
+  
