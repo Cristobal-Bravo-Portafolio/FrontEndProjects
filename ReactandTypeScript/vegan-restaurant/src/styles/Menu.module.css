@@ -1,87 +1,90 @@
-/* Estilos específicos para el menú */
-.menuItem {
+/* Menu title wrapper to ensure proper alignment */
+.menuTitleWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #ffffff;
+  }
+  
+  /* Title styling */
+  .menuTitle {
+    font-size: 4rem; /* Large title size */
+    color: #27ae60;
+    font-weight: 600;
+    margin: 0; /* Remove any margin issues */
+    text-align: center;
+  }
+  
+  /* Menu items styling */
+  .menuItem {
     display: flex;
     align-items: center;
-    background-color: #f9f9f9;
+    background-color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
   }
   
   .menuItem:hover {
-    transform: scale(1.02); /* Slight scale effect on hover */
+    transform: translateY(-5px);
   }
   
-  .menuItem img {
+  .menuImage {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 10px;
     margin-right: 20px;
-    border: 2px solid #ddd; /* Add border to images */
+    border-radius: 10px;
   }
   
   .menuDetails {
-    flex-grow: 1; /* Let the details take up remaining space */
+    flex-grow: 1;
   }
   
-  .menuItem h3 {
-    font-size: 1.5rem;
-    color: #27ae60;
-    margin-bottom: 5px;
-  }
-  
-  .menuItem p {
-    font-size: 1.1rem;
-    color: #555;
-  }
-  
-  .menuItem .price {
+  .price {
     font-weight: bold;
-    margin-top: 10px;
-    color: #2ecc71;
+    color: #27ae60;
   }
   
-  /* Filtros del menú */
+  /* Filters section */
   .filters {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px; /* Increased margin for better spacing */
+    gap: 15px; /* Add space between buttons */
   }
   
+  /* Style for each button */
   .filters button {
     background-color: #27ae60;
     color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 0 10px;
+    border: 2px solid transparent;
+    padding: 12px 30px; /* Adjusted padding for more button prominence */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.2s ease-in-out;
+    border-radius: 30px; /* Slightly more rounded corners */
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
   }
   
+  /* Hover effect */
   .filters button:hover {
+    background-color: white;
+    color: #27ae60;
+    border: 2px solid #27ae60;
+    transform: translateY(-3px); /* Lift the button slightly */
+  }
+  
+  /* Active button style */
+  .filters button.active {
     background-color: #2ecc71;
+    color: white;
+    border: 2px solid #2ecc71;
   }
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .menuItem {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .menuItem img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
-  
-    .menuDetails {
-      text-align: center;
-    }
-  }
   
   

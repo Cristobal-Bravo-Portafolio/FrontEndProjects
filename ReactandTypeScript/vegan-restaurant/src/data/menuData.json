@@ -4,7 +4,7 @@
     "name": "Batido Verde",
     "description": "Un refrescante batido de vegetales verdes y frutas",
     "category": "Bebestibles",
-    "price": 5.99,
+    "price": 5990,
     "image": "/assets/pics/BatidoVerde.jpg"
   },
   {
@@ -12,7 +12,7 @@
     "name": "Bowl de Quinoa",
     "description": "Quinoa con vegetales frescos y aderezo de limón",
     "category": "Platillos principales",
-    "price": 10.99,
+    "price": 10990,
     "image": "/assets/pics/BowldeQuinoa.jpg"
   },
   {
@@ -20,7 +20,7 @@
     "name": "Brownie Vegano",
     "description": "Brownie de chocolate sin productos de origen animal",
     "category": "Postres",
-    "price": 4.99,
+    "price": 4990,
     "image": "/assets/pics/BrownieVegano.jpg"
   },
   {
@@ -28,7 +28,7 @@
     "name": "Ensalada César",
     "description": "Ensalada clásica con un toque vegano",
     "category": "Platillos principales",
-    "price": 8.99,
+    "price": 8990,
     "image": "/assets/pics/EnsaladaCesar.jpg"
   },
   {
@@ -36,7 +36,7 @@
     "name": "Pizza Margherita",
     "description": "Pizza vegana estilo margherita con queso de almendra",
     "category": "Platillos principales",
-    "price": 12.99,
+    "price": 12990,
     "image": "/assets/pics/PizzaMargherita.jpg"
   },
   {
@@ -44,7 +44,7 @@
     "name": "Sopa de Lentejas",
     "description": "Sopa de lentejas al estilo casero",
     "category": "Platillos principales",
-    "price": 7.99,
+    "price": 7990,
     "image": "/assets/pics/SopadeLentejas.jpg"
   },
   {
@@ -52,7 +52,7 @@
     "name": "Tacos de Jackfruit",
     "description": "Tacos de jackfruit con salsa picante",
     "category": "Platillos principales",
-    "price": 9.99,
+    "price": 9990,
     "image": "/assets/pics/TacosdeJackfruit.jpg"
   },
   {
@@ -60,7 +60,7 @@
     "name": "Tarta de Manzana",
     "description": "Tarta de manzana con base crujiente y relleno dulce",
     "category": "Postres",
-    "price": 6.99,
+    "price": 6990,
     "image": "/assets/pics/TartadeManzana.jpg"
   }
 ]

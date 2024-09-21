@@ -1,14 +1,15 @@
-import React from "react";
-import styles from "../styles/About.module.css"; // Import CSS module
+import React from 'react';
+import styles from '../styles/About.module.css';
 
-// Página de "Sobre nosotros"
-const About = () => {
+const About: React.FC = () => {
   return (
     <section id="about" className={styles.about}>
-      <h2 className={styles.title}>Sobre Nosotros</h2>
-      <p className={styles.description}>
-        En El Vegano, nos apasiona ofrecer comidas que no solo son deliciosas, sino también buenas para tu salud y el planeta. 
-        Nuestros platillos son preparados con ingredientes 100% orgánicos y libres de crueldad.
+      <h2>Sobre Nosotros</h2>
+      <p>
+        En ElVegano, creemos en la importancia de la comida sostenible. Todos nuestros platos
+        son 100% veganos y preparados con los ingredientes más frescos y saludables. Nuestro
+        objetivo es proporcionar una experiencia culinaria deliciosa, sin comprometer el
+        bienestar del planeta.
       </p>
     </section>
   );

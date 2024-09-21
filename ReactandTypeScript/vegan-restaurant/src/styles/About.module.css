@@ -1,22 +1,33 @@
-/* Estilos específicos para la página "Sobre Nosotros" */
-
+/* About section styling */
 .about {
-    padding: 100px 20px;
-    background-color: #eaf2f8;
+    background-color: #f4f4f4;
     text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    max-width: 100%;
+    margin: 0;
   }
   
-  .title {
-    font-size: 2.5rem;
+  .about h2 {
+    font-size: 3.5rem;
     color: #27ae60;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
   
-  .description {
-    font-size: 1.2rem;
-    color: #34495e;
-    max-width: 900px;
-    margin: 0 auto;
-    line-height: 1.8;
+  /* Add background color and more space below "Sobre Nosotros" */
+  .about {
+    padding-bottom: 100px;
   }
+  
+  .about p {
+    font-size: 1.4rem;
+    color: #555;
+    line-height: 2;
+    margin: 0 auto; /* Center the text block */
+    max-width: 800px; /* Set a max width to keep the text neatly wrapped */
+    padding: 0 20px; /* Add padding to the sides for better readability */
+  }
+  
+
+
   

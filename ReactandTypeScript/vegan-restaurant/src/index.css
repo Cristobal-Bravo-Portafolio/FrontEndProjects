@@ -1,13 +1,39 @@
-body {
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Global font setup */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* White and green color palette */
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Section padding for consistent layout */
+section {
+  padding: 60px 20px;
+}
+
+/* General styling for headings */
+h1, h2, h3 {
+  color: #27ae60;
+  margin-bottom: 20px;
+  font-weight: 600;
 }

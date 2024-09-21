@@ -1,17 +1,19 @@
-import React from "react";
-import styles from "../styles/Contact.module.css"; // Import CSS module
+import React from 'react';
+import styles from '../styles/Contact.module.css';
 
-// Página de contacto
-const Contact = () => {
+const Contact: React.FC = () => {
   return (
     <section id="contact" className={styles.contact}>
-      <h2 className={styles.title}>Contacto</h2>
-      <p className={styles.info}>Dirección: Calle Falsa 123, Ciudad Vegana</p>
-      <p className={styles.info}>Teléfono: (555) 123-4567</p>
-      <p className={styles.info}>Email: contacto@elvegano.com</p>
+      <h2>Contáctanos</h2>
+      <p>
+        Dirección: Calle Vegana 123, Santiago, Chile<br />
+        Teléfono: +56 9 8765 4321<br />
+        Correo: contacto@elvegano.cl
+      </p>
     </section>
   );
 };
 
 export default Contact;
+
 

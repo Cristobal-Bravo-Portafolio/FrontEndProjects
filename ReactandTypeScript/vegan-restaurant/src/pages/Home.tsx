@@ -1,15 +1,17 @@
-import React from "react";
-import styles from "../styles/Home.module.css"; // Import CSS module
+import React from 'react';
+import styles from '../styles/Home.module.css';
+const logo = "/assets/pics/logo.jpg";
 
-// Página de inicio con el nombre del restaurante
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <section id="home" className={styles.home}>
-      <h1 className={styles.title}>Bienvenidos a El Vegano</h1>
-      <p className={styles.description}>¡El mejor lugar para disfrutar de la comida vegana más deliciosa y saludable!</p>
+      <img src={logo} alt="ElVegano Logo" className={styles.logo} />
+      <h1 className={styles.title}>Bienvenido a ElVegano</h1>
+      <p className={styles.subtitle}>Comida vegana deliciosa, saludable y sostenible.</p>
     </section>
   );
 };
 
 export default Home;
+
 

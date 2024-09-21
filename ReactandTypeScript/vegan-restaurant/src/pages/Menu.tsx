@@ -23,32 +23,34 @@ const Menu: React.FC = () => {
   };
 
   return (
-    <section id="menu">
-      <h2>Nuestro Menú</h2>
+<section id="menu">
+  <div className={styles.menuTitleWrapper}>
+    <h2 className={styles.menuTitle}>Nuestro Menú</h2>
+  </div>
+  
+  {/* Other content remains unchanged */}
+  <div className={styles.filters}>
+    <button onClick={() => handleFilterChange('Todos')}>Todos</button>
+    <button onClick={() => handleFilterChange('Platillos principales')}>Platillos principales</button>
+    <button onClick={() => handleFilterChange('Postres')}>Postres</button>
+    <button onClick={() => handleFilterChange('Bebestibles')}>Bebestibles</button>
+  </div>
+  
+  <div>
+    {filteredData.map(item => (
+      <MenuItem
+        key={item.id}
+        id={item.id}
+        name={item.name}
+        description={item.description}
+        price={item.price}
+        image={item.image}
+        category={item.category}
+      />
+    ))}
+  </div>
+</section>
 
-      {/* Filter buttons */}
-      <div className={styles.filters}>
-        <button onClick={() => handleFilterChange('Todos')}>Todos</button>
-        <button onClick={() => handleFilterChange('Platillos principales')}>Platillos principales</button>
-        <button onClick={() => handleFilterChange('Postres')}>Postres</button>
-        <button onClick={() => handleFilterChange('Bebestibles')}>Bebestibles</button>
-      </div>
-
-      {/* Render menu items */}
-      <div>
-        {filteredData.map(item => (
-          <MenuItem
-            key={item.id} // Use item.id for the unique key
-            id={item.id} // Passing id to the MenuItem
-            name={item.name}
-            description={item.description}
-            price={item.price}
-            image={item.image}
-            category={item.category} // Passing category to the MenuItem
-          />
-        ))}
-      </div>
-    </section>
   );
 };
 
