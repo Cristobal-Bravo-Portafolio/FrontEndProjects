@@ -1,0 +1,49 @@
+Vegan Restaurant - Frontend Project
+Descripción
+
+Este proyecto es una aplicación web para un restaurante vegano, desarrollado con React y TypeScript como un proyecto de portafolio. El objetivo principal es crear una experiencia profesional para usuarios que quieran explorar el menú, conocer más sobre el restaurante y ponerse en contacto.
+Tecnologías utilizadas:
+
+    React (iniciado con Create React App y utilizando TypeScript)
+    CSS Modules para mantener estilos encapsulados por componente
+    React Router DOM para permitir navegación por secciones en una sola página
+    Gestión de datos en JSON para almacenar información del menú
+
+Funcionalidades actuales:
+
+    Página de inicio: Bienvenida y presentación del restaurante.
+    Sección "Sobre Nosotros": Explicación sobre los valores del restaurante.
+    Menú filtrable: Los usuarios pueden ver todos los platillos o filtrarlos por categorías como "Platillos principales", "Postres", y "Bebestibles".
+    Sección de contacto: Información sobre la dirección, teléfono y correo electrónico del restaurante.
+
+Estructura del proyecto:
+
+    src/:
+        components/: Contiene componentes reutilizables como MenuItem.
+        pages/: Componentes que representan las páginas de la aplicación (Home, About, Menu, Contact).
+        styles/: Archivos CSS modulares para estilizar las diferentes páginas y componentes.
+        data/: Contiene el archivo menuData.json con los datos del menú.
+        types/: Define los tipos utilizados en TypeScript, como MenuItemType.
+
+Proceso de desarrollo:
+
+Hasta ahora, el proyecto ha sido construido siguiendo un enfoque modular y organizado, con las siguientes consideraciones:
+
+    Reevaluación de componentes: Se han añadido componentes funcionales básicos, como MenuItem.tsx, con la idea de reevaluar su estructura cuando el proyecto incremente su complejidad. Por ejemplo, el componente NavBar.tsx no se está utilizando aún, pero se reconsiderará su inclusión en futuras versiones.
+
+    Buenas prácticas de código: El código está siendo revisado regularmente para asegurar su claridad, manteniendo el enfoque en un código limpio, legible y eficiente. Se ha utilizado TypeScript para asegurar el tipado y evitar errores comunes, pero queda espacio para mejorar el código asegurando la escalabilidad y manteniendo las últimas tendencias en desarrollo frontend.
+
+    Seguridad y gestión de errores: Hasta ahora no se han implementado mecanismos específicos de seguridad o gestión avanzada de errores, pero el proyecto crecerá con buenas prácticas en estas áreas a medida que se incrementen las funcionalidades y el manejo de datos sensibles.
+
+Áreas de mejora:
+
+    Optimización de componentes: A medida que el proyecto crezca, es importante evaluar la modularidad de los componentes para asegurar su reusabilidad.
+    Revisión de buenas prácticas: El código será evaluado regularmente para seguir las prácticas modernas de desarrollo frontend, asegurando su seguridad y eficiencia.
+    Corrección de posibles bugs: Aunque no se han encontrado errores graves, se implementarán estrategias de testing para asegurar que el crecimiento del proyecto no afecte la estabilidad.
+    Refinamiento del menú de imágenes: Se solucionó el problema inicial de carga de imágenes, pero se realizará una revisión más a fondo para asegurar que todas las imágenes se carguen correctamente en todos los entornos.
+
+Futuras mejoras:
+
+    Reevaluación de la estructura de componentes: Se volverá a evaluar la necesidad de componentes como NavBar.tsx y su posible implementación.
+    Seguimiento de buenas prácticas de código: El código será revisado y ajustado para seguir las últimas recomendaciones en cuanto a código limpio, seguro y escalable.
+    Ampliación del proyecto: En el futuro, se considerará la adición de nuevas funcionalidades como autenticación de usuarios, reservaciones en línea y manejo de pedidos.
