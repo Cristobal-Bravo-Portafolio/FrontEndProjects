@@ -23,7 +23,7 @@ const root = ReactDOM.createRoot(
 // Solo se activa en modo desarrollo, por lo que no afecta el rendimiento en producción.
 root.render(
   <React.StrictMode>
-    <App />  // Renderiza el componente principal (App) que contiene toda la estructura de la aplicación
+    <App />  {/* Renderiza el componente principal (App) que contiene toda la estructura de la aplicación */}
   </React.StrictMode>
 );
 
