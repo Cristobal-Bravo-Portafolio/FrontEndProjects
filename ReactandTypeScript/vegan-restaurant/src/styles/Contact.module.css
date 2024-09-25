@@ -2,21 +2,46 @@
 
 /* .contact: Define el estilo general para la sección "Contacto" */
 .contact {
-  background-color: #f4f4f4; /* Establece un fondo gris claro para diferenciar visualmente esta sección de otras en la página */
-  padding: 80px 20px; /* Añade 80px de espacio vertical (arriba y abajo) y 20px de espacio horizontal (izquierda y derecha) alrededor del contenido */
-  text-align: center; /* Centra todo el contenido dentro de la sección, incluyendo títulos y texto */
+  background-color: #f4f4f4; /* Establece un fondo gris claro */
+  padding: 80px 20px; /* Añade espacio alrededor del contenido para mayor legibilidad */
+  text-align: center; /* Centra todo el contenido de la sección */
 }
 
-/* .contact h2: Define el estilo para el título (h2) dentro de la sección "Contacto" */
+/* .contact h2: Estilo para el título */
 .contact h2 {
-  font-size: 2.5rem; /* Ajusta el tamaño de la fuente del título a 2.5 rem, haciéndolo más grande y prominente */
-  color: #27ae60; /* Establece el color del texto en verde (#27ae60) para mantener la coherencia visual con el tema del proyecto */
-  margin-bottom: 30px; /* Añade un margen inferior de 30px para separar el título del resto del contenido, mejorando la legibilidad */
+  font-size: 3rem; /* Título grande y visible */
+  color: #27ae60; /* Verde característico del proyecto */
+  margin-bottom: 30px; /* Espacio inferior para separar el título del resto del contenido */
 }
 
-/* .contact p: Aplica estilos a los párrafos dentro de la sección "Contacto" */
+/* .contact p: Estilo para los párrafos */
 .contact p {
-  font-size: 1.2; /* Hay un error en esta línea, falta especificar la unidad de medida (rem o px). Probablemente debería ser `1.2rem` o `1.2em` para mantener coherencia con otros estilos de fuente. */
+  font-size: 1.5rem; /* Tamaño de fuente ajustado para legibilidad */
+  color: #555; /* Texto en gris oscuro para contraste y legibilidad */
 }
+
+/* Media queries para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem; /* Ajusta el tamaño del título en pantallas más pequeñas */
+  }
+
+  .contact p {
+    font-size: 1rem; /* Reduce el tamaño de los párrafos para pantallas pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .contact h2 {
+    font-size: 1.8rem; /* Reduce aún más el tamaño del título */
+  }
+
+  .contact p {
+    font-size: 0.9rem; /* Ajusta el tamaño de los párrafos para mejorar la legibilidad */
+  }
+}
+
+
 
   

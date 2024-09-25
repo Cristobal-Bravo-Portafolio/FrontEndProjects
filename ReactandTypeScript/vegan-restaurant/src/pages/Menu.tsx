@@ -1,83 +1,79 @@
-// Importamos React y algunos hooks (`useState` y `useEffect`) que nos permitirán manejar el estado y realizar efectos secundarios.
+// Importamos React y los hooks `useState` y `useEffect`.
+// `useState` se usa para manejar el estado dentro del componente y `useEffect` para manejar los efectos secundarios.
 import React, { useState, useEffect } from 'react';
 
-// Importamos el componente `MenuItem` que será utilizado para renderizar cada elemento del menú.
-// Este componente se asume que está definido en la carpeta `components`.
+// Importamos `MenuItem`, un componente que representa cada elemento individual del menú.
 import MenuItem from '../components/MenuItem';
 
-// Importamos los datos del menú desde un archivo JSON. Este archivo contiene los datos estructurados de cada platillo.
+// Importamos los datos de los platillos desde un archivo JSON local.
+// Esto simula obtener los datos del menú desde una API o base de datos.
 import menuData from '../data/menuData.json';
 
-// Importamos el tipo `MenuItemType` que define la estructura de los objetos de menú.
-// Este tipo ayuda a TypeScript a asegurar que todos los datos del menú sigan una estructura consistente.
+// Importamos el tipo `MenuItemType` para definir la estructura de los objetos de menú y asegurar el tipado con TypeScript.
 import { MenuItemType } from '../types/MenuItemType';
 
-// Importamos los estilos definidos en el archivo CSS modularizado, `Menu.module.css`.
-// Al usar CSS Modules, los estilos están limitados a este componente, evitando conflictos con otros estilos.
+// Importamos los estilos modulares desde el archivo CSS específico para la página del menú.
+// Esto permite aplicar estilos encapsulados sin colisiones con otros componentes.
 import styles from '../styles/Menu.module.css';
 
-// Definimos el componente funcional `Menu` utilizando `React.FC`, lo que facilita el tipado con TypeScript.
-// `React.FC` permite definir un componente funcional y manejar correctamente los props si fuese necesario.
+// Definimos el componente `Menu` como un componente funcional utilizando `React.FC` para tipado con TypeScript.
 const Menu: React.FC = () => {
 
-  // Definimos un estado para almacenar los datos filtrados que se mostrarán en la página.
-  // Inicialmente, será un array vacío y luego se actualizará con los datos filtrados del menú.
+  // **Estado**: `filteredData` contiene los datos filtrados del menú que se mostrarán en la interfaz.
+  // `setFilteredData` es la función que actualiza este estado.
   const [filteredData, setFilteredData] = useState<MenuItemType[]>([]);
 
-  // Definimos un segundo estado para rastrear la categoría seleccionada por el usuario.
-  // Inicialmente, la categoría es 'Todos', lo que significa que se mostrarán todos los elementos del menú.
+  // **Estado**: `selectedCategory` rastrea la categoría seleccionada por el usuario (ej., "Postres", "Platillos principales").
+  // Inicia con el valor "Todos" para mostrar todos los elementos del menú por defecto.
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
 
-  // `useEffect` se utiliza para aplicar un filtro cada vez que la categoría seleccionada cambie.
-  // Cuando `selectedCategory` cambie, esta función se ejecuta automáticamente para actualizar el estado `filteredData`.
+  // **Efecto**: `useEffect` se ejecuta cada vez que cambia el valor de `selectedCategory`.
+  // Filtra los datos del menú según la categoría seleccionada.
   useEffect(() => {
+    // Si la categoría seleccionada es "Todos", mostramos todos los elementos del menú.
     if (selectedCategory === 'Todos') {
-      // Si la categoría es 'Todos', mostramos todos los elementos del menú sin filtrar.
-      setFilteredData(menuData);
+      setFilteredData(menuData); // Se actualiza el estado con todos los datos del menú.
     } else {
-      // Si se selecciona una categoría específica, filtramos los elementos del menú que pertenezcan a esa categoría.
+      // Si no, se filtran los elementos del menú por categoría (propiedad `category` en cada platillo).
       setFilteredData(menuData.filter(item => item.category === selectedCategory));
     }
-  }, [selectedCategory]); // El `useEffect` se ejecuta cada vez que `selectedCategory` cambia.
+  }, [selectedCategory]); // `selectedCategory` es la dependencia del efecto; cuando cambia, se ejecuta este bloque.
 
-  // Definimos una función manejadora para cambiar la categoría seleccionada.
-  // Esta función es llamada cuando el usuario hace clic en uno de los botones de filtro.
+  // **Función manejadora**: `handleFilterChange` es la función que se ejecuta cuando el usuario selecciona una categoría.
+  // Actualiza el estado de `selectedCategory` con la categoría seleccionada por el usuario.
   const handleFilterChange = (category: string) => {
-    setSelectedCategory(category); // Actualizamos el estado `selectedCategory` con la categoría seleccionada.
+    setSelectedCategory(category); // Actualiza el estado con la nueva categoría seleccionada.
   };
 
-  // El componente devuelve JSX que define la estructura y el contenido visual del menú.
   return (
-    // El componente principal está envuelto en una etiqueta `<section>`, lo que ayuda a agrupar visual y semánticamente el contenido.
-    // El `id="menu"` se utiliza para que otras partes del sitio, como la barra de navegación, puedan enlazar a esta sección.
     <section id="menu">
-      {/* Div que contiene el título del menú */}
+      {/* Renderiza el título de la sección del menú */}
       <div className={styles.menuTitleWrapper}>
-        {/* Renderizamos el título del menú con un estilo personalizado */}
         <h2 className={styles.menuTitle}>Nuestro Menú</h2>
       </div>
-      
-      {/* Sección de botones de filtro */}
+
+      {/* Botones de filtro: permiten al usuario seleccionar una categoría de los platillos */}
       <div className={styles.filters}>
-        {/* Botones que permiten filtrar el menú por categoría */}
+        {/* Cada botón de filtro llama a `handleFilterChange` con una categoría específica */}
         <button onClick={() => handleFilterChange('Todos')}>Todos</button>
         <button onClick={() => handleFilterChange('Platillos principales')}>Platillos principales</button>
         <button onClick={() => handleFilterChange('Postres')}>Postres</button>
         <button onClick={() => handleFilterChange('Bebestibles')}>Bebestibles</button>
       </div>
-      
-      {/* Div donde se renderizan los elementos del menú filtrados */}
+
+      {/* Renderizado de los elementos filtrados del menú */}
       <div>
-        {/* Iteramos sobre `filteredData` y para cada elemento del menú creamos un componente `MenuItem` */}
+        {/* Mapea sobre `filteredData` (el estado que contiene los elementos filtrados) */}
         {filteredData.map(item => (
+          // Para cada elemento, renderiza un `MenuItem`, pasando las propiedades relevantes.
           <MenuItem
-            key={item.id}           // Cada elemento necesita una clave única; en este caso, usamos `item.id`.
-            id={item.id}            // Pasamos el ID del elemento al componente `MenuItem`.
-            name={item.name}        // Pasamos el nombre del platillo.
-            description={item.description}  // Pasamos la descripción del platillo.
-            price={item.price}      // Pasamos el precio del platillo.
-            image={item.image}      // Pasamos la imagen del platillo.
-            category={item.category} // Pasamos la categoría a la que pertenece el platillo.
+            key={item.id} // `key` único es necesario para que React gestione eficientemente la lista de elementos.
+            id={item.id}
+            name={item.name}
+            description={item.description}
+            price={item.price}
+            image={item.image}
+            category={item.category}
           />
         ))}
       </div>
@@ -85,8 +81,11 @@ const Menu: React.FC = () => {
   );
 };
 
-// Exportamos el componente `Menu` para que pueda ser importado y usado en otras partes del proyecto, como en el archivo principal de la aplicación (App.tsx).
+// Exportamos el componente `Menu` para que pueda ser utilizado en otras partes de la aplicación.
 export default Menu;
+
+
+
 
 
 

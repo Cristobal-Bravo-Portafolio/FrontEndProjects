@@ -1,48 +1,76 @@
-/* Estilos para la barra de navegación (Navbar) */
-
-/* .navbar: Define el estilo general de la barra de navegación */
+/* Estilos generales para la barra de navegación */
 .navbar {
-  display: flex; /* Utiliza Flexbox para alinear los elementos dentro de la barra de navegación en una fila horizontal */
-  justify-content: space-between; /* Distribuye el espacio uniformemente entre los elementos (logo y enlaces), empujándolos hacia los extremos opuestos */
-  align-items: center; /* Alinea verticalmente los elementos al centro de la barra de navegación */
-  background-color: #27ae60; /* El color de fondo es verde (#27ae60), manteniendo la coherencia con la paleta de colores del proyecto */
-  padding: 10px 20px; /* Añade un padding para dar espacio alrededor de los elementos, lo que mejora el diseño */
-  position: fixed; /* Hace que la barra de navegación se quede fija en la parte superior de la página, incluso al hacer scroll */
-  width: 100%; /* Asegura que la barra de navegación ocupe el 100% del ancho de la pantalla */
-  top: 0; /* Posiciona la barra de navegación en la parte superior de la página */
-  z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos en la página, usando un alto valor de z-index */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade una sombra sutil para darle un efecto de elevación sobre el contenido de la página */
+  display: flex; /* Flexbox para organizar los elementos en una fila horizontal */
+  justify-content: space-between; /* Separa el logo y los enlaces de navegación a ambos extremos de la barra */
+  align-items: center; /* Alinea verticalmente el contenido al centro */
+  background-color: #27ae60; /* Color de fondo verde */
+  padding: 10px 20px; /* Espacio interno para evitar que el contenido quede pegado a los bordes */
+  position: fixed; /* Fija la barra de navegación en la parte superior de la pantalla, incluso al hacer scroll */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  top: 0; /* Posiciona la barra en la parte superior */
+  z-index: 1000; /* Asegura que la barra esté por encima de otros elementos en la página */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para darle un efecto elevado */
 }
 
-/* Estilos para el logo */
-
-/* .navbar .logo a: Estilos para el enlace que contiene el logo dentro de la barra de navegación */
+/* Estilo para el logo */
 .navbar .logo a {
-  font-size: 1.8rem; /* Tamaño de fuente grande para que el logo sea visible y destaque */
-  font-weight: 600; /* Negrita para hacer que el logo tenga más presencia */
-  color: #fff; /* Color blanco para contrastar con el fondo verde de la barra de navegación */
+  font-size: 1.8rem; /* Tamaño de fuente grande para destacar el logo */
+  font-weight: 600; /* Negrita para darle más prominencia */
+  color: #fff; /* El color del logo es blanco, para contrastar con el fondo verde */
 }
 
-/* Estilos para los enlaces de navegación */
-
-/* .navLinks: Estilos para el contenedor de los enlaces de navegación */
+/* Estilo para los enlaces de navegación */
 .navLinks {
-  list-style-type: none; /* Elimina los puntos de lista predeterminados de la lista no ordenada (ul) */
-  display: flex; /* Flexbox para alinear los enlaces de navegación horizontalmente en una fila */
-  gap: 20px; /* Añade espacio entre cada enlace de navegación */
+  list-style-type: none; /* Elimina los puntos predeterminados de la lista */
+  display: flex; /* Flexbox para alinear los enlaces en una fila horizontal */
+  gap: 20px; /* Espacio entre cada enlace */
 }
 
-/* .navLinks li a: Estilos para los enlaces dentro de la barra de navegación */
 .navLinks li a {
-  color: white; /* Texto en blanco para que contraste con el fondo verde */
-  font-size: 1.2rem; /* Tamaño de fuente moderado para que los enlaces sean visibles pero no demasiado grandes */
-  padding: 5px 10px; /* Añade un poco de espacio alrededor del texto para mejorar la experiencia de clic y la apariencia */
-  transition: color 0.3s ease; /* Transición suave del color al pasar el cursor, para mejorar la interactividad */
+  color: white; /* Texto en blanco para contrastar con el fondo verde */
+  font-size: 1.2rem; /* Tamaño de fuente legible para los enlaces */
+  padding: 5px 10px; /* Espacio interno para mejorar la accesibilidad al hacer clic */
+  transition: color 0.3s ease; /* Transición suave al cambiar el color cuando el cursor pasa por encima */
 }
 
-/* .navLinks li a:hover: Estilos que se aplican cuando el usuario pasa el cursor sobre un enlace */
 .navLinks li a:hover {
-  color: #2ecc71; /* Cambia el color del enlace a un verde más claro al pasar el cursor sobre él */
+  color: #2ecc71; /* Cambia el color del texto a verde claro cuando el usuario pasa el ratón por encima */
 }
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .navLinks {
+    flex-direction: column; /* Los enlaces se apilan verticalmente */
+    gap: 10px; /* Menor espacio entre enlaces */
+    position: absolute; /* Posiciona los enlaces de forma absoluta */
+    top: 60px; /* Coloca los enlaces justo debajo de la barra de navegación */
+    right: 0; /* Alinea los enlaces al lado derecho de la pantalla */
+    background-color: #27ae60; /* Fondo verde para mantener la consistencia */
+    padding: 10px 20px; /* Añade espacio interno para que los enlaces no estén pegados */
+    width: 100%; /* Los enlaces ocupan todo el ancho disponible */
+  }
+
+  .navLinks li a {
+    font-size: 1rem; /* Disminuye el tamaño de la fuente en pantallas más pequeñas */
+    padding: 10px; /* Aumenta el área de clic en pantallas pequeñas */
+  }
+
+  .navbar .logo a {
+    font-size: 1.5rem; /* Reduce el tamaño del logo para pantallas pequeñas */
+  }
+}
+
+/* Media query para pantallas muy pequeñas (móviles más pequeños) */
+@media (max-width: 480px) {
+  .navbar .logo a {
+    font-size: 1.2rem; /* Reduce aún más el tamaño del logo para pantallas muy pequeñas */
+  }
+
+  .navLinks li a {
+    font-size: 0.9rem; /* Reduce el tamaño de los enlaces en pantallas muy pequeñas */
+  }
+}
+
+
 
   

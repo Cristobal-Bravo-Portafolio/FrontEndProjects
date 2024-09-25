@@ -1,31 +1,74 @@
 /* Estilo principal de la sección "About" */
-
-/* .about: Define los estilos generales para la sección "Sobre Nosotros". */
+/* Define un contenedor con un fondo gris claro y espaciado uniforme arriba y abajo */
 .about {
-  background-color: #f4f4f4; /* Establece un color de fondo gris claro (#f4f4f4) para diferenciar visualmente esta sección de otras. */
-  text-align: center; /* Alinea todo el contenido de la sección al centro, lo que incluye el texto y otros elementos. */
-  padding-top: 100px; /* Añade 100 píxeles de espacio (padding) en la parte superior de la sección para darle aire y que el contenido no esté demasiado cerca del borde superior. */
-  padding-bottom: 100px; /* Añade 100 píxeles de espacio en la parte inferior para equilibrar el diseño con la parte superior. */
-  max-width: 100%; /* Asegura que la sección ocupe el 100% del ancho disponible en el contenedor padre, sin limitar el tamaño horizontal. */
-  margin: 0; /* Elimina cualquier margen externo, asegurando que la sección ocupe todo el espacio disponible. */
+  background-color: #f4f4f4; /* Fondo gris claro */
+  text-align: center; /* Centra el texto dentro de la sección */
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  margin: 0; /* Elimina los márgenes externos */
 }
 
-/* .about h2: Aplica estilos específicos al título (h2) dentro de la sección "About". */
+/* Título de la sección "About" */
 .about h2 {
-  font-size: 3.5rem; /* Ajusta el tamaño de la fuente del título a 3.5 rem (relativa al tamaño de la fuente base), haciendo que el título sea grande y llamativo. */
-  color: #27ae60; /* Establece el color del texto en verde (#27ae60), que es coherente con la paleta de colores del proyecto (blanco y verde). */
-  margin-bottom: 30px; /* Añade un margen inferior de 30 píxeles para separar el título del contenido que viene después (como el párrafo). */
+  font-size: 3rem; /* Tamaño grande del título */
+  color: #27ae60; /* Verde característico del proyecto */
+  margin-bottom: 30px; /* Espacio inferior para separar del contenido */
 }
 
-/* .about p: Aplica estilos a los párrafos dentro de la sección "About". */
+/* Estilos de los párrafos dentro de "About" */
+/* Se ajusta el tamaño de fuente, color y espaciado para legibilidad */
 .about p {
-  font-size: 1.4rem; /* Ajusta el tamaño de la fuente a 1.4 rem, lo que la hace más grande que el texto estándar, para mayor legibilidad. */
-  color: #555; /* Establece un color de texto gris (#555), lo que lo hace suave pero legible sobre el fondo gris claro. */
-  line-height: 2; /* Aumenta el interlineado a 2, lo que mejora la legibilidad y da una apariencia más espaciosa al texto. */
-  margin: 0 auto; /* Centra el bloque de texto dentro de la sección al asignar márgenes automáticos a los lados izquierdo y derecho. */
-  max-width: 800px; /* Limita el ancho máximo del párrafo a 800 píxeles, evitando que el texto se extienda demasiado en pantallas grandes, lo que mejora la legibilidad. */
-  padding: 0 20px; /* Añade un padding de 20 píxeles a los lados izquierdo y derecho, asegurando que el texto no esté pegado al borde en pantallas pequeñas. */
+  font-size: 1.5rem; /* Texto grande para mejorar la legibilidad */
+  color: #555; /* Color gris oscuro */
+  line-height: 1.8; /* Altura de línea amplia para mayor claridad */
+  margin: 0 auto; /* Centra el párrafo horizontalmente */
+  max-width: 800px; /* Limita el ancho máximo para mejorar la legibilidad */
+  padding: 0 20px; /* Añade relleno en los lados */
 }
+
+/* Estilos responsivos para pantallas medianas (hasta 768px) */
+@media (max-width: 768px) {
+  .about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  /* Reduce el tamaño del título en pantallas más pequeñas */
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  /* Ajusta el tamaño de los párrafos en pantallas medianas */
+  .about p {
+    max-width: 90%; /* Aumenta el uso del ancho en pantallas medianas */
+    font-size: 1.1rem; /* Tamaño de fuente reducido para mejorar el ajuste */
+  }
+}
+
+/* Estilos responsivos para pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  /* Reduce aún más el tamaño del título en pantallas pequeñas */
+  .about h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Ajusta el ancho y el tamaño de los párrafos en pantallas pequeñas */
+  .about p {
+    max-width: 100%; /* Ocupa todo el ancho disponible */
+    padding: 0 15px; /* Ajusta el relleno lateral */
+    font-size: 1rem; /* Reduce el tamaño de fuente para pantallas pequeñas */
+  }
+}
+
+
+
+
 
   
 

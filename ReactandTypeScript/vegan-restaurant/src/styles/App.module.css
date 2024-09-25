@@ -2,55 +2,81 @@
 
 /* Header y navegación */
 
-/* .header: Define el estilo general del encabezado de la página. */
+/* .header: Define el estilo general del encabezado de la página */
 .header {
-  background-color: #2c3e50; /* El fondo del encabezado es un color oscuro (#2c3e50), lo que crea un buen contraste con el texto blanco. */
-  padding: 15px; /* Añade 15px de espacio interno (padding) alrededor del contenido del header, para que no esté pegado a los bordes. */
-  position: fixed; /* El encabezado se mantiene fijo en la parte superior de la página, incluso cuando se hace scroll. */
-  top: 0; /* Asegura que el encabezado esté alineado con la parte superior de la página. */
-  width: 100%; /* El encabezado ocupará todo el ancho de la página, asegurando consistencia visual. */
-  z-index: 1000; /* Asegura que el header esté en la parte superior de otros elementos, utilizando un valor alto de `z-index`. */
+  background-color: #2c3e50; /* Fondo oscuro para contraste con texto blanco */
+  padding: 15px; /* Espacio interno alrededor del contenido */
+  position: fixed; /* El encabezado se mantiene fijo en la parte superior */
+  top: 0; /* Alinea con la parte superior de la página */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
-/* .nav: Define el estilo para la barra de navegación, alineando los enlaces en el centro. */
+/* .nav: Estilos para la barra de navegación */
 .nav {
-  display: flex; /* Utiliza Flexbox para crear una disposición flexible de los elementos hijos (enlaces de navegación). */
-  justify-content: center; /* Centra los elementos hijos horizontalmente dentro de la barra de navegación. */
-  gap: 20px; /* Añade un espacio de 20px entre cada enlace de navegación para mejorar la legibilidad y el diseño. */
+  display: flex; /* Usa Flexbox para alinear los enlaces */
+  justify-content: center; /* Centra los enlaces horizontalmente */
+  gap: 20px; /* Espaciado entre enlaces */
 }
 
-/* .navLink: Estilos para los enlaces de navegación dentro del header. */
+/* .navLink: Estilos para los enlaces de navegación */
 .navLink {
-  color: white; /* El texto de los enlaces es blanco, lo que contrasta bien con el fondo oscuro del header. */
-  text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces. */
-  font-size: 1.2rem; /* Establece un tamaño de fuente de 1.2 rem, lo que hace los enlaces más grandes y fáciles de leer. */
-  padding: 10px; /* Añade un padding alrededor del enlace, aumentando el área en la que el usuario puede hacer clic. */
+  color: white; /* Texto blanco sobre el fondo oscuro */
+  text-decoration: none; /* Elimina subrayado por defecto */
+  font-size: 1.2rem; /* Tamaño de fuente legible */
+  padding: 10px; /* Aumenta el área clicable */
 }
 
-/* .navLink:hover: Define el estilo al pasar el cursor sobre los enlaces de navegación. */
+/* .navLink:hover: Estilo al pasar el cursor */
 .navLink:hover {
-  background-color: #34495e; /* Cambia el fondo del enlace al pasar el cursor, mejorando la interactividad. */
-  border-radius: 5px; /* Redondea las esquinas del fondo de los enlaces para que se vea más moderno. */
+  background-color: #34495e; /* Fondo más claro para interacción */
+  border-radius: 5px; /* Bordes redondeados para un diseño moderno */
 }
 
 /* Footer y botón para volver arriba */
 
-/* .footer: Estilo para el footer, que generalmente contiene información adicional o enlaces en la parte inferior de la página. */
+/* .footer: Estilo del pie de página */
 .footer {
-  text-align: center; /* Centra todo el contenido dentro del footer. */
-  margin-top: 50px; /* Añade un margen superior de 50px, separando el footer del contenido principal de la página. */
+  text-align: center; /* Centra el contenido del footer */
+  margin-top: 50px; /* Espacio superior para separación del contenido */
 }
 
-/* .backToTop: Estilo para el enlace que permite volver a la parte superior de la página. */
+/* .backToTop: Estilo para el enlace de volver al inicio */
 .backToTop {
-  text-decoration: none; /* Elimina el subrayado predeterminado del enlace para volver arriba. */
-  color: #27ae60; /* El color del enlace es verde (#27ae60), que coincide con la paleta de colores del proyecto. */
-  font-size: 1.2rem; /* El tamaño de la fuente es 1.2 rem, haciéndolo fácilmente legible. */
+  text-decoration: none; /* Elimina subrayado por defecto */
+  color: #27ae60; /* Verde que coincide con la paleta del proyecto */
+  font-size: 1.2rem; /* Tamaño de fuente legible */
 }
 
-/* .backToTop:hover: Cambia el estilo del enlace cuando el usuario pasa el cursor sobre él. */
+/* .backToTop:hover: Estilo al pasar el cursor */
 .backToTop:hover {
-  text-decoration: underline; /* Añade un subrayado al enlace al pasar el cursor, indicando que es interactivo. */
+  text-decoration: underline; /* Añade subrayado para interacción */
 }
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .navLink {
+    font-size: 1rem; /* Tamaño de fuente reducido para pantallas pequeñas */
+    padding: 8px; /* Ajuste de padding en pantallas pequeñas */
+  }
+
+  .header {
+    padding: 10px; /* Menor padding para pantallas más pequeñas */
+  }
+}
+
+/* Media queries para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .navLink {
+    font-size: 0.9rem; /* Fuente aún más pequeña para pantallas de móviles */
+    padding: 5px; /* Padding más ajustado */
+  }
+  
+  .header {
+    padding: 8px; /* Aún menos padding para pantallas móviles */
+  }
+}
+
+
 
   

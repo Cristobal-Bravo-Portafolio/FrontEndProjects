@@ -1,0 +1,117 @@
+/* Weather Container */
+.weatherContainer {
+  position: fixed; /* El contenedor se mantiene en una posición fija en la pantalla, independientemente del scroll */
+  top: calc(5vh + 50px); /* El contenedor se posiciona más arriba, combinando 5% de la altura de la ventana y un espacio extra de 50px */
+  right: 1vw; /* Alineado al borde derecho de la ventana con un margen del 1% del ancho de la pantalla */
+  background-color: white; /* Fondo blanco para hacer que el contenido sea legible y limpio */
+  padding: 15px; /* Espacio interno para que el contenido no esté pegado a los bordes */
+  border-radius: 8px; /* Bordes redondeados para un estilo moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añade una sombra ligera para dar profundidad */
+  z-index: 999; /* Asegura que el contenedor esté sobre otros elementos en la página */
+  max-width: 300px; /* El contenedor no puede ser más ancho de 300px */
+  width: auto; /* El ancho del contenedor se ajusta automáticamente al contenido */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Transición suave para cambios en la visibilidad o movimiento */
+}
+
+/* Botón de minimizar/maximizar */
+.weatherToggleButton {
+  position: absolute; /* Posiciona el botón en relación al contenedor */
+  top: -5px; /* Ajusta el botón hacia arriba del borde superior del contenedor */
+  right: 6px; /* Coloca el botón cerca del borde derecho del contenedor */
+  background: none; /* Elimina el fondo del botón para mostrar solo el símbolo */
+  border: none; /* Elimina los bordes del botón para un diseño más limpio */
+  color: #555; /* Color gris medio para el símbolo del botón */
+  cursor: pointer; /* Cambia el cursor a una mano cuando el usuario pasa el ratón sobre el botón */
+  font-size: 1.5rem; /* Tamaño del símbolo del botón (más/menos) */
+  z-index: 1000; /* Asegura que el botón esté sobre todo el contenido del contenedor */
+  transition: color 0.3s ease-in-out; /* Transición suave en el cambio de color del botón */
+}
+
+.weatherToggleButton:focus {
+  outline: none; /* Elimina el borde de enfoque predeterminado al interactuar con el botón */
+}
+
+.weatherToggleButton:hover {
+  color: #000; /* Cambia el color del botón a negro cuando el usuario lo pasa por encima */
+}
+
+/* Título del clima */
+.weatherTitle {
+  font-size: 1.5rem; /* Tamaño de la fuente del título, grande y prominente */
+  font-weight: bold; /* Negrita para darle importancia al título */
+  color: #2ecc71; /* Color verde para hacer coincidir con el tema del sitio */
+  margin-bottom: 10px; /* Espacio inferior entre el título y el contenido */
+}
+
+/* Detalles del clima */
+.weatherDetails {
+  color: #555; /* Color gris para un contraste suave y legible */
+  font-size: 1rem; /* Tamaño de fuente estándar para los detalles */
+}
+
+/* Icono del clima */
+.weatherIcon {
+  width: 50px; /* Ancho del icono de clima */
+  height: 50px; /* Altura del icono de clima */
+  margin-top: 10px; /* Espacio entre los detalles y el icono */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 768px) {
+  .weatherContainer {
+    top: calc(10vh + 50px); /* Ajusta la altura para pantallas más pequeñas */
+    right: 5vw; /* Margen del 5% desde el borde derecho */
+    max-width: 90%; /* El contenedor puede ocupar hasta el 90% del ancho de la pantalla */
+    width: auto; /* El ancho del contenedor se ajusta automáticamente */
+  }
+
+  .weatherToggleButton {
+    font-size: 1.5rem; /* El tamaño del botón se ajusta en pantallas pequeñas */
+  }
+
+  .weatherTitle {
+    font-size: 1.5rem; /* El tamaño del título también se ajusta */
+  }
+
+  .weatherIcon {
+    width: 40px; /* Tamaño del icono ajustado para pantallas pequeñas */
+    height: 40px;
+  }
+}
+
+/* Estilos responsivos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .weatherContainer {
+    top: calc(10vh + 50px); /* Ajusta la altura aún más para pantallas muy pequeñas */
+    right: 5vw;
+    max-width: 95%; /* El contenedor ocupa hasta el 95% del ancho en pantallas muy pequeñas */
+    width: auto;
+  }
+
+  .weatherToggleButton {
+    font-size: 1.5rem; /* Tamaño del botón ajustado */
+  }
+
+  .weatherTitle {
+    font-size: 1.5rem; /* Tamaño del título ajustado */
+  }
+
+  .weatherIcon {
+    width: 30px; /* El icono se reduce aún más para pantallas muy pequeñas */
+    height: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

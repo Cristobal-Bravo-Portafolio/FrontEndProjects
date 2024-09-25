@@ -1,8 +1,7 @@
-// Importa React para poder usar JSX en este archivo
+// Importa React para permitir el uso de JSX en este archivo
 import React from "react";
 
-// Importa el enrutador de React Router DOM, renombrándolo como "Router"
-// Esto es necesario para que la aplicación tenga capacidad de navegación
+// Importa el enrutador de React Router DOM para gestionar la navegación dentro de la aplicación
 import { BrowserRouter as Router } from "react-router-dom";
 
 // Importa los componentes que representan las diferentes páginas/secciones de la aplicación
@@ -11,57 +10,44 @@ import About from "./pages/About";
 import Menu from "./pages/Menu";
 import Contact from "./pages/Contact";
 
-// Importa los estilos globales de la aplicación desde el archivo App.module.css
-import styles from "./styles/App.module.css"; // Importa estilos globales para la aplicación
+// Importa el componente Weather desde la carpeta services
+import Weather from "./services/Weather";
 
-// Define el componente principal de la aplicación
+// Importa los estilos globales de la aplicación desde el archivo App.module.css
+import styles from "./styles/App.module.css";
+
+// Define el componente principal de la aplicación, que encapsula toda la funcionalidad
 function App() {
   return (
-    // El componente Router de React Router se usa para envolver la aplicación
-    // Esto proporciona la funcionalidad de navegación en la aplicación
+    // Envuelve la aplicación con el componente `Router`, que habilita la navegación
     <Router>
 
-      {/* Header: Contiene la barra de navegación */}
-      {/* Usa los estilos de CSS modules, garantizando que sean encapsulados */}
+      {/* Header: contiene la barra de navegación */}
+      {/* Usa estilos modulares para garantizar que los estilos sean encapsulados */}
       <header className={styles.header}>
 
-        {/* Barra de navegación que contiene los enlaces para las secciones de la página */}
-        {/* Los enlaces son de tipo ancla (href="#"), lo que significa que no redirigen a otra página */}
-        {/* Solo hacen scroll a la sección correspondiente dentro de la misma página */}
+        {/* Barra de navegación con enlaces a las diferentes secciones de la página */}
+        {/* Cada enlace usa el atributo href para hacer scroll a la sección correspondiente en la misma página */}
         <nav className={styles.nav}>
-          {/* Enlace que lleva a la sección "Inicio" */}
           <a href="#home" className={styles.navLink}>Inicio</a>
-
-          {/* Enlace que lleva a la sección "Sobre Nosotros" */}
           <a href="#about" className={styles.navLink}>Sobre Nosotros</a>
-
-          {/* Enlace que lleva a la sección "Menú" */}
           <a href="#menu" className={styles.navLink}>Menú</a>
-
-          {/* Enlace que lleva a la sección "Contacto" */}
           <a href="#contact" className={styles.navLink}>Contacto</a>
         </nav>
       </header>
 
-      {/* El contenido principal de la aplicación */}
-      {/* Aquí se renderizan los componentes de las diferentes secciones de la página */}
+      {/* Contenido principal */}
       <main>
-        {/* Renderiza el componente Home (sección de inicio) */}
-        <Home />
-
-        {/* Renderiza el componente About (sección sobre nosotros) */}
-        <About />
-
-        {/* Renderiza el componente Menu (sección del menú del restaurante) */}
-        <Menu />
-
-        {/* Renderiza el componente Contact (sección de contacto) */}
-        <Contact />
+        {/* Renderiza los componentes de las diferentes secciones */}
+        <Home /> {/* Sección de inicio */}
+        <Weather /> {/* Sección de clima */}
+        <About /> {/* Sección "Sobre Nosotros" */}
+        <Menu /> {/* Sección "Menú" */}
+        <Contact /> {/* Sección "Contacto" */}
       </main>
 
-      {/* Footer: Contiene el enlace para volver al inicio de la página */}
+      {/* Footer: contiene un enlace para volver al inicio de la página */}
       <footer className={styles.footer}>
-        {/* Enlace que lleva de vuelta a la sección "Inicio" */}
         <a href="#home" className={styles.backToTop}>Volver arriba</a>
       </footer>
     </Router>
@@ -70,6 +56,9 @@ function App() {
 
 // Exporta el componente App para que pueda ser utilizado en otras partes del proyecto
 export default App;
+
+
+
 
 
 
